@@ -39,7 +39,6 @@ const IndexPage = () => {
   if (error) return <h2>Error</h2>;
   if (loading) return <h2>Loading...</h2>;
 
-
   return (
     <div className='main'>
       <div className='part1'>
