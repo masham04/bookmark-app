@@ -28,7 +28,6 @@ const resolvers = {
             q.Lambda(x => q.Get(x))
           )
         )
-        console.log(result.data)
         return result.data.map((el) => {
           return {
             id: el.ts,
