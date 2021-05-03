@@ -1,5 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
-const faunadb = require("faunadb");
+var faunadb = require("faunadb");
 
 q = faunadb.query
 
@@ -56,7 +56,7 @@ const resolvers = {
             },
           )
         )
-        return result.data
+
       }
       catch (err) {
         console.log(err)
