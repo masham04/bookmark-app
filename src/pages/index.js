@@ -1,7 +1,8 @@
 import * as React from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import gql from "graphql-tag";
-import './index.css'
+import Loader from "react-loader-spinner";
+import './index.css';
 
 const GET_BOOKMARKS = gql`
   {
@@ -36,8 +37,17 @@ const IndexPage = () => {
     })
   }
 
-  if (error) return <h2>Error</h2>;
-  if (loading) return <h2>Loading...</h2>;
+  if (error) return <h2>{error}</h2>;
+  if (loading) return <center style={{ marginTop: '40vh' }}>
+    <Loader
+      type="Watch"
+      color="#00BFFF"
+      height={100}
+      width={100}
+      timeout={3000} //3 secs
+    />
+  </center>
+
 
   return (
     <div className='main'>

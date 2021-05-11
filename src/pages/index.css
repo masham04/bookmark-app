@@ -63,3 +63,17 @@ input[type="text"]:focus {
   font-size: 16px;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  .main {
+    display: block;
+  }
+  .part1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .part2 {
+    width: 100%;
+  }
+}
